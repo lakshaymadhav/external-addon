@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'externalAddon',
+    modulePrefix: 'external-addon',
     environment: environment,
   };
 

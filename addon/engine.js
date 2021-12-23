@@ -7,7 +7,6 @@ const { modulePrefix } = config;
 const Eng = Engine.extend({
   modulePrefix,
   Resolver,
-  // eslint-disable-next-line ember/avoid-leaking-state-in-ember-objects
   dependencies: {
     services: ['data-store'],
     externalRoutes: ['home', 'blog'],
