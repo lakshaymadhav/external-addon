@@ -1,3 +1,4 @@
+/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
 import Engine from 'ember-engines/engine';
 import Resolver from 'ember-resolver';
 import loadInitializers from 'ember-load-initializers';
@@ -8,14 +9,9 @@ const Eng = Engine.extend({
   modulePrefix,
   Resolver,
   dependencies: {
-    services: [
-      'data-store'
-    ],
-    externalRoutes:[
-      'home',
-      'blog'
-    ]
-  }
+    services: ['data-store'],
+    externalRoutes: ['home', 'blog'],
+  },
 });
 
 loadInitializers(Eng, modulePrefix);
