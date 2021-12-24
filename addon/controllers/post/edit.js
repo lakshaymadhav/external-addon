@@ -6,7 +6,7 @@ export default class PostEditController extends Controller {
   type = 'public';
 
   @action
-  chooseType(mode) {
+  foo(mode) {
     this.set('type', mode);
   }
 }
