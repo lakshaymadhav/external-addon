@@ -4,15 +4,15 @@ import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
 
 const { modulePrefix } = config;
-const Eng = Engine.extend({
-  modulePrefix,
-  Resolver,
-  dependencies: {
+
+export default class MyEngine extends Engine {
+  modulePrefix = modulePrefix;
+  Resolver = Resolver;
+
+  dependencies = {
     services: ['data-store'],
     externalRoutes: ['home', 'blog'],
-  },
-});
+  };
+}
 
-loadInitializers(Eng, modulePrefix);
-
-export default Eng;
+loadInitializers(MyEngine, modulePrefix);
